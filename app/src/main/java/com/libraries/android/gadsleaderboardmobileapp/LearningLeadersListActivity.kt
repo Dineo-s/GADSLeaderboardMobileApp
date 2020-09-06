@@ -11,5 +11,6 @@ class LearningLeadersListActivity : AppCompatActivity() {
         setContentView(R.layout.activity_learning_leaders_list)
 
         leaders_list.layoutManager = LinearLayoutManager(this)
+        //Add adapter
     }
 }
