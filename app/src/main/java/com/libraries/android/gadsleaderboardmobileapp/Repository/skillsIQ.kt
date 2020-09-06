@@ -1,22 +1,22 @@
 package com.libraries.android.gadsleaderboardmobileapp.Repository
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
+//import com.google.gson.annotations.Expose;
+//import com.google.gson.annotations.SerializedName;
 
 class skillsIQ {
-    @SerializedName("name")
-    @Expose
-    private var name: String? = null
+    // @SerializedName("name")
+    //  @Expose
+    private var name: String? = "Dineo"
 
-    @SerializedName("score")
-    @Expose
-    private var score: Int? = null
+    // @SerializedName("score")
+    //  @Expose
+    private var score: Int? = 100
 
-    @SerializedName("country")
-    @Expose
-    private var country: String? = null
+    //  @SerializedName("country")
+    // @Expose
+    private var country: String? = "South Africa"
 
-    @SerializedName("badgeUrl")
-    @Expose
+    // @SerializedName("badgeUrl")
+    // @Expose
     private var badgeUrl: String? = null
 
     fun getName(): String? {
