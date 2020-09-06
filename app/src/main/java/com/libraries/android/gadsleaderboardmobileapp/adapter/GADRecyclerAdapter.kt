@@ -8,9 +8,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.libraries.android.gadsleaderboardmobileapp.R
+import com.libraries.android.gadsleaderboardmobileapp.Repository.StudentsSkillIQ
 import com.libraries.android.gadsleaderboardmobileapp.Repository.skillsIQ
 
-class GADRecyclerAdapter(context: Context, private val data: List<skillsIQ>) :
+class GADRecyclerAdapter(context: Context, private val data: List<skillsIQ>?) :
     RecyclerView.Adapter<GADRecyclerAdapter.ViewHolder>() {
 
     private val layoutInflater = LayoutInflater.from(context)
@@ -26,13 +27,15 @@ class GADRecyclerAdapter(context: Context, private val data: List<skillsIQ>) :
 
     }
 
-    override fun getItemCount() = data.size
+    override fun getItemCount(): Int {
+        return data?.size ?: 0
+    }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val data = data[position]
+        val data = data?.get(position)
         // holder.logo?. = data.getBadgeUrl() load image using picasso
-        holder.textName?.text = data.getName()
-        holder.textContent?.text = "${data.getScore()} SkillsIQ, ${data.getCountry()}"
+        holder.textName?.text = data?.name
+        holder.textContent?.text = "${data?.score} SkillsIQ, ${data?.country}"
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
