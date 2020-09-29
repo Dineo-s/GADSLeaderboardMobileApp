@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LearningLeadersListActivity">
+    tools:context=".LearningLeadersListFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/leaders_list"
